@@ -1,0 +1,635 @@
+// ### Primary Colors
+// (intro and email sign up background)
+$dark-blue--ies: hsl(217, 28%, 15%);
+// rest colors
+$dark-blue-main: hsl(218, 28%, 13%);
+$dark-blue-footer: hsl(216, 53%, 9%);
+$dark-blue-testimonials: hsl(219, 30%, 18%);
+
+// ### Accent Colors
+$cyan: hsl(176, 68%, 64%);
+$blue: hsl(198, 60%, 50%);
+
+// ### Neutral Color
+$white: hsl(0, 0%, 100%);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 14px;
+  font-family: "Open Sans", sans-serif;
+}
+
+.header {
+  background: $dark-blue--ies;
+  color: $white;
+  position: relative;
+}
+
+.nav {
+  height: 15vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+}
+
+.logo {
+  width: 6rem;
+}
+
+.nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  list-style: none;
+  padding: 1rem;
+}
+
+.nav ul li {
+  text-decoration: none;
+  color: hsl(0, 0%, 76%);
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.nav ul li:nth-child(2) {
+  margin: 1rem;
+}
+
+.introimg {
+  margin-top: 2%;
+  width: 50vw;
+}
+
+.top-header {
+  // height: 85vh;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+
+  position: relative;
+}
+
+.top-header h1 {
+  width: 50%;
+  font-size: 2.5rem;
+  z-index: 1;
+  margin: 4rem;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+}
+
+.top-header h2 {
+  z-index: 1;
+  width: 40%;
+  font-weight: 400;
+  color: hsl(0, 0%, 76%);
+  font-size: 1.3rem;
+}
+
+.top-header button {
+  z-index: 1;
+  background: linear-gradient(to left, $blue, $cyan);
+  padding: 1.5rem 8rem;
+  color: white;
+  border-radius: 2rem;
+  border: none;
+  font-size: 1rem;
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+  margin: 2.5rem 0 10% 0;
+}
+
+.curve {
+  position: absolute;
+  width: 100%;
+  bottom: 0%;
+  left: 0;
+}
+
+.information {
+  background: $dark-blue-main;
+  color: white;
+}
+
+.info {
+  display: grid;
+  grid-template-columns: repeat(2, 30%);
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  grid-gap: 6rem;
+  padding: 0rem 5rem;
+}
+
+.info h3 {
+  font-family: "Raleway", sans-serif;
+  font-size: 1.4rem;
+  margin: 1rem;
+}
+
+.info h4 {
+  font-weight: 400;
+  font-size: 1rem;
+  width: 90%;
+}
+
+.info1,
+.info2,
+.info3,
+.info4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.info-img {
+  height: 8rem;
+  width: 8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cinfo {
+  padding: 8rem 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 10rem;
+}
+
+.cinfo-l {
+  margin-right: 4rem;
+  flex: 0 1 40%;
+}
+
+.cinfo-l img {
+  width: 100%;
+}
+
+.cinfo-r {
+  flex: 0 1 40%;
+}
+
+.cinfo-r h1 {
+  font-size: 3rem;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  line-height: 3.8rem;
+}
+
+.cinfo-r h2 {
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 1.8rem;
+  margin: 2rem 0;
+}
+
+.see-how {
+  background: none;
+  border: none;
+  color: $cyan;
+  font-size: 1.2rem;
+  border-bottom: 1px solid $cyan;
+  outline: none;
+}
+
+.testimonials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $dark-blue-main;
+  color: $white;
+  padding-bottom: 20rem;
+  position: relative;
+}
+
+.quote-cont {
+  width: 20%;
+  margin: 2rem;
+  font-size: 1rem;
+  box-shadow: 5px 5px $dark-blue--ies, 10px 10px $dark-blue--ies;
+  position: relative;
+}
+.test1 {
+  background: $dark-blue-testimonials;
+  padding: 1.5rem;
+  z-index: 2;
+}
+
+.test1::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1rem;
+  top: 0;
+  left: 0;
+  background: $dark-blue-testimonials;
+  z-index: 1;
+}
+
+.test2,
+.test3 {
+  width: 20%;
+  padding: 1.5rem;
+  background: $dark-blue-testimonials;
+  margin: 2rem;
+  font-size: 1rem;
+  box-shadow: 5px 5px $dark-blue--ies, 10px 10px $dark-blue--ies;
+  position: relative;
+}
+
+.test h4 {
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+}
+
+.author img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
+
+.author-details h5 {
+  margin-bottom: 0.2rem;
+}
+
+.author-details h6 {
+  font-size: 0.5rem;
+  font-weight: 400;
+}
+
+.quote {
+  position: absolute;
+  top: -5%;
+  transform: translate(-50%, -50%);
+  left: 4%;
+  z-index: 1;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 50%;
+  margin: auto;
+  background: $dark-blue--ies;
+  color: $white;
+  padding: 2rem 2rem;
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.contact h1 {
+  font-family: "Raleway", sans-serif;
+  font-size: 2rem;
+}
+
+.contact h2 {
+  font-size: 0.9rem;
+  font-weight: 400;
+  margin: 2rem 0;
+}
+
+form {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+input[type="email"] {
+  flex: 2;
+  padding: 12px 20px;
+  display: inline-block;
+  border: none;
+  margin-right: 2rem;
+  border-radius: 2rem;
+  box-sizing: border-box;
+}
+
+.email-btn {
+  flex: 1;
+  background: linear-gradient(to left, $blue, $cyan);
+  padding: 1rem 2rem;
+  color: white;
+  border-radius: 2rem;
+  border: none;
+  font-size: 1rem;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.footer {
+  position: relative;
+  background: $dark-blue-footer;
+}
+
+.footer-content {
+  padding: 15rem 5% 8rem 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  color: $white;
+}
+
+.footer-info {
+  display: flex;
+  margin-top: 3rem;
+  width: 100%;
+}
+
+.finfo-l {
+  flex: 2;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  font-family: "Raleway", sans-serif;
+}
+
+.finfo-l h2 {
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.finfo-l img {
+  width: 40px;
+  margin-right: 1rem;
+}
+
+.finfo-m {
+  flex: 2;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.pn,
+.em {
+  display: flex;
+}
+.pn {
+  margin-bottom: 1rem;
+  transform: translateX(-0.4rem);
+}
+
+.pn h4,
+.em h4 {
+  font-weight: 400;
+  font-size: 1rem;
+  font-size: 0.8rem;
+  margin-left: 1rem;
+}
+
+.finfo-r-links {
+  display: flex;
+  flex: 2;
+  justify-content: space-evenly;
+}
+
+.finfo-r-links h4 {
+  margin-bottom: 1rem;
+  font-weight: 400;
+}
+
+.finfo-r-social {
+  display: flex;
+  flex: 1;
+  justify-content: space-around;
+}
+
+@media only screen and (max-width: 1233px) {
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  input[type="email"] {
+    flex: 1;
+    margin-right: 0rem;
+    margin-bottom: 2rem;
+    padding: 12px 4%;
+    display: inline-block;
+    border: none;
+    border-radius: 2rem;
+    box-sizing: border-box;
+    width: 90%;
+  }
+
+  .email-btn {
+    flex: 1;
+    padding: 1rem 0;
+    font-size: 0.9rem;
+    width: 90%;
+  }
+
+  .testimonials {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .quote-cont {
+    width: 90%;
+    margin: auto;
+  }
+
+  .test2,
+  .test3 {
+    width: 90%;
+    margin: 2.5rem auto;
+    padding: 1.5rem;
+  }
+
+  .test3 {
+    margin: 0 auto;
+  }
+
+  .test h4 {
+    font-size: 1.1rem;
+  }
+
+  .author img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .author-details h5 {
+    font-size: 1.2rem;
+  }
+
+  .author-details h6 {
+    font-size: 0.75rem;
+  }
+}
+
+@media only screen and (max-width: 1035px) {
+  .logo {
+    width: 6rem;
+  }
+
+  .nav ul li {
+    font-size: 1.1rem;
+  }
+
+  .introimg {
+    margin-top: 4%;
+    width: 60vw;
+  }
+
+  .top-header h1 {
+    width: 90%;
+    font-size: 2rem;
+    margin: 4rem auto 2rem auto;
+  }
+
+  .top-header h2 {
+    width: 80%;
+    font-size: 1.1rem;
+  }
+
+  .top-header button {
+    width: 50%;
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .top-header button {
+    padding: 1.5rem 0rem;
+    width: 70%;
+
+    font-size: 1rem;
+  }
+
+  .info {
+    grid-template-columns: auto;
+  }
+
+  .info h3 {
+    font-size: 2rem;
+  }
+
+  .info h4 {
+    font-size: 1.2rem;
+  }
+
+  .info-img {
+    height: 10rem;
+    width: 10rem;
+  }
+
+  .cinfo {
+    padding: 8rem 5%;
+    flex-direction: column;
+  }
+
+  .cinfo-l {
+    margin-right: 0rem;
+    margin-bottom: 4rem;
+  }
+
+  .cinfo-l img {
+    width: 100%;
+  }
+
+  .cinfo-r {
+    margin-left: 2rem;
+  }
+
+  .cinfo-r h1 {
+    font-size: 3rem;
+  }
+
+  .cinfo-r h2 {
+    font-size: 1.6rem;
+  }
+
+  .see-how {
+    font-size: 1.5rem;
+  }
+
+  .contact {
+    width: 90%;
+  }
+
+  .footer-info {
+    flex-direction: column;
+    margin-top: 3rem;
+  }
+
+  .finfo-l {
+    flex: 1;
+    margin-bottom: 2rem;
+  }
+
+  .finfo-l h2 {
+    font-size: 1.5rem;
+  }
+
+  .finfo-m {
+    flex: 1;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .pn {
+    margin-bottom: 2rem;
+    transform: translateX(0rem);
+  }
+
+  .pn h4,
+  .em h4 {
+    font-size: 1rem;
+  }
+
+  .finfo-r-links {
+    flex-direction: column;
+    flex: 1;
+    margin: 4rem 0;
+  }
+
+  .finfo-r-links h4 {
+    margin-bottom: 1.8rem;
+    font-size: 1.2rem;
+  }
+
+  .llink {
+    margin-bottom: 2rem;
+  }
+
+  .finfo-r-social {
+    justify-content: center;
+  }
+
+  .finfo-r-social span:nth-child(2) {
+    margin: 0 3rem;
+  }
+}
+
+//MOBILE
+@media only screen and (max-width: 375px) {
+}
