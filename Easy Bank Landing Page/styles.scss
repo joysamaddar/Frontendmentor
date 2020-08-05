@@ -64,13 +64,11 @@ body {
   li:hover > a:after {
     content: "";
     position: absolute;
-    transform: translate(0%, -100%);
-    top: 5rem;
-    right: 0;
     bottom: 0;
     left: 0;
     z-index: 2;
-    margin: -5px;
+    height: 4px;
+    width: 100%;
     background: linear-gradient(to right, $limegreen, $brightcyan);
   }
   a {
@@ -88,6 +86,7 @@ body {
   padding: 0.8rem 2rem;
   border-radius: 2rem;
   display: inline-block;
+  transition: all 0.3s ease;
 }
 
 .invite-btn:hover {
@@ -248,6 +247,7 @@ body {
     font-weight: 400;
     color: $darkblue;
     margin: 1rem 1rem;
+    transition: all 0.3s ease;
   }
   h3:hover {
     color: $limegreen;
@@ -295,6 +295,9 @@ body {
       cursor: pointer;
     }
 
+    path {
+      transition: all 0.3s ease;
+    }
     svg:hover > path {
       fill: $limegreen;
     }
@@ -317,6 +320,7 @@ body {
     margin: 1.5rem;
     font-size: 1rem;
     cursor: pointer;
+    transition: all 0.3s ease;
   }
   li:hover {
     color: $limegreen;
@@ -419,7 +423,7 @@ body {
     z-index: 998;
     pointer-events: none;
     opacity: 0;
-    transition: all 0.4s ease;
+    transition: all 0.2s ease;
   }
   .nav-link {
     position: fixed;
@@ -499,10 +503,6 @@ body {
 }
 
 @media only screen and (max-width: 783.5px) {
-  #header {
-    padding-bottom: 63rem;
-  }
-
   .splash {
     background: url(./img/bg-intro-mobile.svg) no-repeat;
     top: 0%;
@@ -510,7 +510,7 @@ body {
   }
 
   #header {
-    padding-bottom: 60rem;
+    padding-bottom: 63rem;
   }
 
   .header-left {
@@ -553,6 +553,6 @@ body {
 
 @media only screen and (max-width: 398.5px) {
   #header {
-    padding-bottom: 67rem;
+    padding-bottom: 69rem;
   }
 }
