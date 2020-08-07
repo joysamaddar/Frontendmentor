@@ -1,0 +1,231 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: linear-gradient(135deg, white, #fff5f5);
+  background: none;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Josefin Sans", sans-serif;
+  background: linear-gradient(135deg, white, #fff5f5);
+}
+
+main {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 3fr 2fr;
+      grid-template-columns: 3fr 2fr;
+  -ms-grid-rows: 20vh 80vh;
+      grid-template-rows: 20vh 80vh;
+}
+
+.overlay {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 /2;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1/3;
+  background: url(./img/bg-pattern-desktop.svg) no-repeat;
+  background-size: cover;
+}
+
+.logo {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 /2;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  margin: 2rem 5% 2rem 15%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.enterinfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 /2;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  margin: 0rem 5% 8rem 15%;
+}
+
+.enterinfo h1 {
+  font-size: 4rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  line-height: 4.5rem;
+  letter-spacing: 1rem;
+}
+
+.enterinfo span {
+  font-weight: 300;
+  color: #ce9797;
+}
+
+.enterinfo p {
+  font-weight: 600;
+  color: #ce9797;
+  margin: 3rem 0;
+  width: 90%;
+}
+
+.emailform {
+  position: relative;
+}
+
+.emailform > div {
+  position: relative;
+}
+
+.emailform input {
+  border: 1px solid #ce9797;
+  outline: none;
+  border-radius: 2rem;
+  padding: 1rem 8.5rem 1rem 1.5rem;
+  width: 80%;
+  color: #ce9797;
+}
+
+.emailform input:invalid:not(:placeholder-shown) {
+  background: url(./img/icon-error.svg) no-repeat;
+  background-size: 20px;
+  background-position: calc(96% - 5rem);
+  border: 2px solid #f96262;
+}
+
+.emailform input:invalid:not(:placeholder-shown) ~ .requirements {
+  max-height: 200px;
+  padding: 1rem 30px 20px 2rem;
+}
+
+.emailform .requirements {
+  padding: 0 30px 0 2rem;
+  color: #999;
+  max-height: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  overflow: hidden;
+  color: #f96262;
+}
+
+.emailform button {
+  position: relative;
+  -webkit-transform: translate(-103%, 0.2rem);
+          transform: translate(-103%, 0.2rem);
+  padding: 0.95rem 2.5rem;
+  background: linear-gradient(135deg, #f8bfbf, #ee8c8c);
+  border: none;
+  outline: none;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+
+.emailform button img {
+  -webkit-transform: translateX(25%);
+          transform: translateX(25%);
+}
+
+.emailform button:focus,
+.emailform button:active,
+.emailform button:focus {
+  -webkit-box-shadow: 0px 10px 20px #ce9797;
+          box-shadow: 0px 10px 20px #ce9797;
+  background: linear-gradient(135deg, #ffd1d1, #ff8585);
+}
+
+.mainimg {
+  background: url(./img/hero-desktop.jpg) no-repeat;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 /3;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1/3;
+  background-size: cover;
+}
+
+@media only screen and (max-width: 1011px) {
+  .emailform input {
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  main {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 10vh 35vh 55vh;
+        grid-template-rows: 10vh 35vh 55vh;
+  }
+  .logo {
+    margin: 2rem 10%;
+  }
+  .enterinfo {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1 /2;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    grid-row: 3/4;
+    margin: 3rem 10%;
+  }
+  .enterinfo h1 {
+    font-size: 2.2rem;
+    text-align: center;
+    line-height: 2.8rem;
+    letter-spacing: 0.6rem;
+  }
+  .enterinfo p {
+    text-align: center;
+    color: #ce9797;
+    margin: 2rem 0;
+    width: 100%;
+  }
+  .emailform input {
+    border: 1px solid #ce9797;
+    outline: none;
+    border-radius: 2rem;
+    padding: 1rem 7rem 1rem 1.5rem;
+    width: 100%;
+    color: #ce9797;
+  }
+  .emailform button {
+    position: absolute;
+    -webkit-transform: translate(-5.6rem, 0rem);
+            transform: translate(-5.6rem, 0rem);
+  }
+  .mainimg {
+    background: url(./img/hero-desktop.jpg) no-repeat top;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1 /2;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2/ 3;
+    background-size: cover;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
