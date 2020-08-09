@@ -16,14 +16,18 @@
     <link rel="stylesheet" href="./styles.css" />
     <title>Base Apparel (with GSAP, ScrollMagic and Barba)</title>
   </head>
-  <body>
-    <main>
+  <body data-barba="wrapper">
+    <div class="cursor"></div>
+    <div class="layer layer1"></div>
+    <div class="layer layer2"></div>
+    <main id="main-page" data-barba="container" data-barba-namespace="home">
       <div class="overlay"></div>
       <div class="logo">
         <img src="./img/logo.svg" alt="" />
       </div>
       <div class="enterinfo">
         <h1><span>We're</span><br />coming<br />soon</h1>
+        <a class="blogp1" href="./blog/index.html">Click here to go to blog!</a>
         <p>
           Hello fellow shoppers! We're currently building our new fashion store.
           Add your email below to stay up-to-date with announcements and our
@@ -43,6 +47,30 @@
       </div>
       <div class="mainimg"></div>
     </main>
+
+    <script src="https://unpkg.com/@barba/core"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"
+      integrity="sha256-2p2tRZlPowp3P/04Pw2rqVCSbhyV/IB7ZEVUglrDS/c="
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"
+      integrity="sha256-XBVALc3QsDSQiDtiaBwNZ2rxCJTHzlUhhlDQ84J8bw8="
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"
+      integrity="sha256-+9YNuItWuR4sbqeaNiJOxG0BvptYz4fbUXbIZoH5Jwo="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/gsap.min.js"
+      integrity="sha256-XDWrid8aGX+NZwSY7JzTu6oWArI71Sw+aUZ9Hd0P5mo="
+      crossorigin="anonymous"
+    ></script>
     <script src="./app.js"></script>
   </body>
 </html>

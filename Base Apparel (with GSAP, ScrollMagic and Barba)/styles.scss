@@ -4,6 +4,7 @@
 
 $red1: hsl(0, 36%, 70%);
 $red2: hsl(0, 93%, 68%);
+
 $greyred: hsl(0, 6%, 24%);
 $grad1: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
 $grad2: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
@@ -14,6 +15,7 @@ $grad2: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
   box-sizing: border-box;
   background: $grad1;
   background: none;
+  cursor: none;
 }
 
 body {
@@ -22,7 +24,7 @@ body {
   background: $grad1;
 }
 
-main {
+#main-page {
   display: grid;
   grid-template-columns: 3fr 2fr;
   grid-template-rows: 20vh 80vh;
@@ -69,6 +71,14 @@ main {
     color: $red1;
     margin: 3rem 0;
     width: 90%;
+  }
+  .blogp1 {
+    text-transform: uppercase;
+    color: $red2;
+    text-decoration: none;
+    margin: 1rem 0;
+    border-bottom: 1px solid $red2;
+    width: 15rem;
   }
 }
 
@@ -134,6 +144,56 @@ main {
   background-size: cover;
 }
 
+//Blog page
+
+.blog {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background: $grad2;
+
+  h1 {
+    text-align: center;
+    color: white;
+    font-size: 4rem;
+  }
+
+  .blogp2 {
+    text-transform: uppercase;
+    color: $red2;
+    text-decoration: none;
+    margin: 1rem 0;
+    border-bottom: 1px solid $red2;
+    width: 17.63rem;
+  }
+}
+
+.blog_content1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  div {
+    flex: 1 0 50vw;
+  }
+  h1 {
+    margin: 0 5% 0 5%;
+  }
+  p {
+    margin: 0 5% 0 5%;
+    font-size: 1rem;
+    color: #222222;
+  }
+  img {
+    overflow: hidden;
+    flex: 0 1 50%;
+    object-fit: cover;
+    height: 100%;
+  }
+}
 @media only screen and (max-width: 1011px) {
   .emailform {
     input {
@@ -192,4 +252,32 @@ main {
     grid-row: 2/ 3;
     background-size: cover;
   }
+}
+
+.cursor {
+  width: 1rem;
+  height: 1rem;
+  position: absolute;
+  border: 1px solid $red2;
+  background: $red2;
+  border-radius: 50%;
+  z-index: 9999;
+}
+
+.layer1 {
+  width: 100vw;
+  height: 100vh;
+  background: $red1;
+  position: absolute;
+  z-index: 9999;
+  clip: rect(0 0vw 0vh 0);
+}
+
+.layer2 {
+  width: 100vw;
+  height: 100vh;
+  background: $red2;
+  position: absolute;
+  z-index: 9999;
+  clip: rect(0 0vw 0vh 0);
 }

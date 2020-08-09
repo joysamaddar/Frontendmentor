@@ -5,6 +5,7 @@
           box-sizing: border-box;
   background: linear-gradient(135deg, white, #fff5f5);
   background: none;
+  cursor: none;
 }
 
 body {
@@ -13,7 +14,7 @@ body {
   background: linear-gradient(135deg, white, #fff5f5);
 }
 
-main {
+#main-page {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 3fr 2fr;
@@ -92,6 +93,15 @@ main {
   width: 90%;
 }
 
+.enterinfo .blogp1 {
+  text-transform: uppercase;
+  color: #f96262;
+  text-decoration: none;
+  margin: 1rem 0;
+  border-bottom: 1px solid #f96262;
+  width: 15rem;
+}
+
 .emailform {
   position: relative;
 }
@@ -167,6 +177,79 @@ main {
   background-size: cover;
 }
 
+.blog {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: linear-gradient(135deg, #f8bfbf, #ee8c8c);
+}
+
+.blog h1 {
+  text-align: center;
+  color: white;
+  font-size: 4rem;
+}
+
+.blog .blogp2 {
+  text-transform: uppercase;
+  color: #f96262;
+  text-decoration: none;
+  margin: 1rem 0;
+  border-bottom: 1px solid #f96262;
+  width: 17.63rem;
+}
+
+.blog_content1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.blog_content1 div {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 50vw;
+          flex: 1 0 50vw;
+}
+
+.blog_content1 h1 {
+  margin: 0 5% 0 5%;
+}
+
+.blog_content1 p {
+  margin: 0 5% 0 5%;
+  font-size: 1rem;
+  color: #222222;
+}
+
+.blog_content1 img {
+  overflow: hidden;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+}
+
 @media only screen and (max-width: 1011px) {
   .emailform input {
     width: 70%;
@@ -227,5 +310,33 @@ main {
     grid-row: 2/ 3;
     background-size: cover;
   }
+}
+
+.cursor {
+  width: 1rem;
+  height: 1rem;
+  position: absolute;
+  border: 1px solid #f96262;
+  background: #f96262;
+  border-radius: 50%;
+  z-index: 9999;
+}
+
+.layer1 {
+  width: 100vw;
+  height: 100vh;
+  background: #ce9797;
+  position: absolute;
+  z-index: 9999;
+  clip: rect(0 0vw 0vh 0);
+}
+
+.layer2 {
+  width: 100vw;
+  height: 100vh;
+  background: #f96262;
+  position: absolute;
+  z-index: 9999;
+  clip: rect(0 0vw 0vh 0);
 }
 /*# sourceMappingURL=styles.css.map */
