@@ -18,13 +18,19 @@ $grad2: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
   cursor: none;
 }
 
+.mainpage {
+  overflow: hidden;
+}
+
 body {
   font-size: 16px;
   font-family: "Josefin Sans", sans-serif;
   background: $grad1;
+  overflow-x: hidden;
 }
 
 #main-page {
+  overflow: hidden;
   display: grid;
   grid-template-columns: 3fr 2fr;
   grid-template-rows: 20vh 80vh;
@@ -203,7 +209,7 @@ body {
 }
 
 @media only screen and (max-width: 760px) {
-  main {
+  #main-page {
     grid-template-columns: 1fr;
     grid-template-rows: 10vh 35vh 55vh;
   }
@@ -230,6 +236,10 @@ body {
       margin: 2rem 0;
       width: 100%;
     }
+
+    .blogp1 {
+      margin: 1rem auto;
+    }
   }
 
   .emailform {
@@ -251,6 +261,9 @@ body {
     grid-column: 1 /2;
     grid-row: 2/ 3;
     background-size: cover;
+  }
+  .cursor {
+    display: none;
   }
 }
 

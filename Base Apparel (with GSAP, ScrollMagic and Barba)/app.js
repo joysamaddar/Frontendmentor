@@ -87,9 +87,9 @@ barba.init({
         });
         tl2.fromTo(
           ".layer",
-          0.75,
+          1,
           { clip: "rect(0 100vw 100vh 0)" },
-          { clip: "rect(0 0vw 0vh 0)", stagger: 0.25 },
+          { clip: "rect(0 0vw 0vh 0)" },
           "-=0.5"
         );
         tl2.fromTo(

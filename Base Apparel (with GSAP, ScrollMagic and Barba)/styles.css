@@ -8,13 +8,19 @@
   cursor: none;
 }
 
+.mainpage {
+  overflow: hidden;
+}
+
 body {
   font-size: 16px;
   font-family: "Josefin Sans", sans-serif;
   background: linear-gradient(135deg, white, #fff5f5);
+  overflow-x: hidden;
 }
 
 #main-page {
+  overflow: hidden;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 3fr 2fr;
@@ -257,7 +263,7 @@ body {
 }
 
 @media only screen and (max-width: 760px) {
-  main {
+  #main-page {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
     -ms-grid-rows: 10vh 35vh 55vh;
@@ -287,6 +293,9 @@ body {
     margin: 2rem 0;
     width: 100%;
   }
+  .enterinfo .blogp1 {
+    margin: 1rem auto;
+  }
   .emailform input {
     border: 1px solid #ce9797;
     outline: none;
@@ -309,6 +318,9 @@ body {
     -ms-grid-row-span: 1;
     grid-row: 2/ 3;
     background-size: cover;
+  }
+  .cursor {
+    display: none;
   }
 }
 
