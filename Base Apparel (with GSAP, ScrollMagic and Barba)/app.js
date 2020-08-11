@@ -22,10 +22,10 @@ function animateBlog() {
     triggerHook: 1,
   })
     .setTween(tl)
-    .addIndicators({
-      colorStart: "white",
-      colorTrigger: "white",
-    })
+    // .addIndicators({
+    //   colorStart: "white",
+    //   colorTrigger: "white",
+    // })
     .addTo(controller);
 
   blogScene2 = new ScrollMagic.Scene({
@@ -33,10 +33,10 @@ function animateBlog() {
     triggerHook: 0.55,
   })
     .setTween(t2)
-    .addIndicators({
-      colorStart: "blue",
-      colorTrigger: "blue",
-    })
+    // .addIndicators({
+    //   colorStart: "blue",
+    //   colorTrigger: "blue",
+    // })
     .addTo(controller);
 }
 
@@ -89,14 +89,14 @@ barba.init({
           ".layer",
           1,
           { clip: "rect(0 100vw 100vh 0)" },
-          { clip: "rect(0 0vw 0vh 0)" },
-          "-=0.5"
+          { clip: "rect(100vh 100vw 100vh 100vw)" }
         );
         tl2.fromTo(
           current.container,
           1,
           { opacity: 0 },
-          { opacity: 1, onComplete: done }
+          { opacity: 1, onComplete: done },
+          "-=2"
         );
       },
     },
