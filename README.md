@@ -1,2 +1,2 @@
 # Frontendmentor
-Trying out different projects from frontendmentor.
+Trying out different projects from https://www.frontendmentor.io/
